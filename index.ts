@@ -1,11 +1,14 @@
 #!/usr/bin/env node
-import { program } from 'commander';
+import * as commander from 'commander';
 import { createComponent } from './lib/commands';
 
-program.version('1.0.0')
+commander.program.version('1.0.0')
 
-program
-  .command(' <name> <dir>')
+let gen = commander.program.command('generate').alias('g');
+
+gen.command('component <name> <dir>')
+  .alias('c')
+  .description('Create new component')
   .option('-S, --style', 'Create index.scss at the component folder')
   .option('-F, --functional', 'Create a functional component')
   .option('-T, --typscript', 'Use .tsx extention')
@@ -17,4 +20,5 @@ program
   .option('-urd, --useReducer', 'Implements useReducer hook')
   .option('-udi, --useDispatch', 'Implements useDispatch hook')
   .action(createComponent)
-  .parse(process.argv)
+
+commander.program.parse(process.argv)

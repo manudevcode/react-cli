@@ -121,6 +121,10 @@
         "version": "0d14fa22c41fdc7277e6f71473b20ebc07f40f00e38875142335d5b63cdfc9d2",
         "signature": "0d14fa22c41fdc7277e6f71473b20ebc07f40f00e38875142335d5b63cdfc9d2"
       },
+      "../lib/utils/index.ts": {
+        "version": "688353c12aa8ae0a90326408b57a62163ebd9faf5712c29a294f821d0a093d4f",
+        "signature": "c9228fc87484dcedd9c41209d0afd8a253d1ebd53bce20eeeea779ad1e70684c"
+      },
       "../lib/templates/index.ts": {
         "version": "41a190fd05e3edbb64667c01d87035dcb97c1120d8cd6751ac929e2b8ea4dca6",
         "signature": "c50e05814dc5ba46c82d460ff7958c8db43188d147cd6851287e9731ba3c4c6e"
@@ -135,15 +139,11 @@
       },
       "../lib/commands/index.ts": {
         "version": "41bd111126ef0651f9e323db63894cd7d1c482d1e3ea7d01249830e936fe7e90",
-        "signature": "78d76ac72f872f9f7900a5e640a83dde257decd924870f06696c699f31e312ca"
+        "signature": "7692bb49528b689c924d55369b8fdc2d676e2b832604db9b50be9ad22b414373"
       },
       "../index.ts": {
-        "version": "6e415af1f7b0a051643905656d4ee94dd7dcc3915deb2d9b6b593423e76a0c0a",
+        "version": "bf3dcb84ab5186d667c9903467a822f22cb762567c9f08fe6758b868467c7f73",
         "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
-      },
-      "../lib/utils/index.ts": {
-        "version": "688353c12aa8ae0a90326408b57a62163ebd9faf5712c29a294f821d0a093d4f",
-        "signature": "c9228fc87484dcedd9c41209d0afd8a253d1ebd53bce20eeeea779ad1e70684c"
       },
       "../node_modules/@types/btoa-lite/index.d.ts": {
         "version": "acbb182621c18e2bb48d82c5a4ee3a7d47b4f5db5c6986f8594fdd1432c88dd4",
@@ -368,6 +368,7 @@
       ],
       "../lib/commands/index.ts": [
         "../node_modules/chalk/index.d.ts",
+        "../lib/utils/index.ts",
         "../lib/templates/index.ts",
         "../lib/inquires/index.ts",
         "../lib/files/index.ts"
@@ -609,6 +610,9 @@
       ]
     },
     "exportedModulesMap": {
+      "../lib/commands/index.ts": [
+        "../lib/utils/index.ts"
+      ],
       "../node_modules/@types/node/async_hooks.d.ts": [
         "../node_modules/@types/node/async_hooks.d.ts"
       ],
@@ -872,10 +876,11 @@
       "../../../../../../../usr/local/lib/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
       "../node_modules/commander/typings/index.d.ts",
       "../node_modules/chalk/index.d.ts",
+      "../lib/utils/index.ts",
       "../lib/templates/index.ts",
       "../lib/inquires/index.ts",
       "../lib/files/index.ts",
-      "../lib/utils/index.ts",
+      "../lib/commands/index.ts",
       "../node_modules/@types/btoa-lite/index.d.ts",
       "../node_modules/@types/figlet/index.d.ts",
       "../node_modules/@types/node/globals.d.ts",
@@ -925,19 +930,6 @@
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/base.d.ts",
       "../node_modules/@types/node/index.d.ts",
-      [
-        "../lib/commands/index.ts",
-        [
-          {
-            "file": "../lib/commands/index.ts",
-            "start": 126,
-            "length": 10,
-            "messageText": "Cannot find module '../utils'.",
-            "category": 1,
-            "code": 2307
-          }
-        ]
-      ],
       "../index.ts"
     ]
   },

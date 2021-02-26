@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const commander_1 = require("commander");
+const commander = require("commander");
 const commands_1 = require("./lib/commands");
-commander_1.program.version('1.0.0');
-commander_1.program
-    .command(' <name> <dir>')
+commander.program.version('1.0.0');
+let gen = commander.program.command('generate').alias('g');
+gen.command('component <name> <dir>')
+    .alias('c')
+    .description('Create new component')
     .option('-S, --style', 'Create index.scss at the component folder')
     .option('-F, --functional', 'Create a functional component')
     .option('-T, --typscript', 'Use .tsx extention')
@@ -16,6 +18,6 @@ commander_1.program
     .option('-ure, --useRef', 'Implements useRef hook')
     .option('-urd, --useReducer', 'Implements useReducer hook')
     .option('-udi, --useDispatch', 'Implements useDispatch hook')
-    .action(commands_1.createComponent)
-    .parse(process.argv);
+    .action(commands_1.createComponent);
+commander.program.parse(process.argv);
 //# sourceMappingURL=index.js.map

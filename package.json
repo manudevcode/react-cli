@@ -1,6 +1,6 @@
 {
-  "name": "react-cli",
-  "version": "1.0.0",
+  "name": "reactjs-cli-tools",
+  "version": "1.0.2",
   "description": "A minimalist cli tool for React",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "react"
   ],
   "bin": {
-    "react-cli": "./dist/index.js"
+    "reactjs": "./dist/index.js"
   },
   "author": "manudevcode",
   "license": "ISC",
@@ -31,13 +31,10 @@
     "clui": "^0.3.6",
     "commander": "^7.1.0",
     "configstore": "^5.0.1",
-    "figlet": "^1.5.0",
     "fs-extra": "^9.1.0",
     "inquirer": "^7.3.3",
     "lodash": "^4.17.20",
-    "minimist": "^1.2.5",
     "replace": "^1.2.0",
-    "simple-git": "^2.35.0",
     "touch": "^3.1.0"
   },
   "devDependencies": {
