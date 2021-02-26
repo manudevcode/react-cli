@@ -1,10 +1,11 @@
 <div style="text-align: center">
   <h1>reactjs-cli-tools a minimalist CLI for React</h1>
   <img src="https://raw.githubusercontent.com/manudevcode/react-cli/dev/assets/banner.png" alt="A minimalist CLI for React" />
-
   <br/>
   <br/>
-
+  <img src="https://nodei.co/npm/reactjs-cli-tools.png" alt="NPM stats" />
+  <br/>
+  <br/>
   I developed this tool while I was learning a little more JavaScript and it has helped me a lot when developing with React, it is simple and easy to use, I hope it will also help you.
 
 </div>
