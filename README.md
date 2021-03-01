@@ -20,7 +20,7 @@ Created by [Manu Codes](https://github.com/manudevcode)
 ## Installation
 
 `npm i -g reactjs-cli-tools`
-(try with sudo if not works)
+(try with sudo if it doesn't work)
 
 ## Usage
 
