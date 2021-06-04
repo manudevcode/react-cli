@@ -7,7 +7,6 @@ import { askOverrideDir } from '../inquires';
 import { directoryExists, createDir, getCurrentDirectoryBase } from "../files";
 
 export const createComponent = async (name: string, dir: string, args: Args) => {
-  console.log('Log at ~ file: index.ts ~ line 7 ~ createComponent ~ args', args)  
   let componentPath = `${dir}/${name}`;
   
   if (!directoryExists(`${dir}`)) {
@@ -49,7 +48,8 @@ const buildDeclarations = (args: any) => {
 }
 
 const createFile = (componentPath: string, name: string, args: Args) => {
-  const { style, typscript, functional, ...restArgs } = args;
+  const { style, typscript, functional, test, ...restArgs } = args;
+  console.log('Log at 👉 ~ file: index.ts ~ line 52 ~ createFile ~ args', args);
   const ext = typscript ? 'tsx' : 'jsx';
   const filePath = `${componentPath}/index.${ext}`;
   const stylesPath = `${componentPath}/index.scss`;
@@ -87,7 +87,6 @@ const createFile = (componentPath: string, name: string, args: Args) => {
   let body = functional ? [templates.functionalComponent] : [templates.classComponent].join('\n');
   let template = imports.join('\n') + '\n' + body + '\n';
   
-  console.log(chalk.yellow('CREATING COMPONENT FILE:', `${getCurrentDirectoryBase()}/${componentPath}/index.jsx`));
   fs.outputFile(filePath, template, (err: any) => {
     if (err) throw err;
     replace({
@@ -113,7 +112,25 @@ const createFile = (componentPath: string, name: string, args: Args) => {
       recursive: false,
       silent: true,
     });
-
-    console.log(chalk.green('CREATED COMPONENT:', `${getCurrentDirectoryBase()}/${componentPath}/index.jsx`));
+    console.log(chalk.green('CREATED COMPONENT:', `${getCurrentDirectoryBase()}/${componentPath}/index.${ext}`));    
   });
+
+
+  if (test) {
+    // Create test file 
+    console.log(chalk.blue('CREATING COMPONENT TEST FILE:', `${getCurrentDirectoryBase()}/${componentPath}/index.test.${ext}`));
+    let templateTest = templates.testComponent;
+    let testFilePath = `${componentPath}/index.test.${ext}`;
+    fs.outputFile(testFilePath, templateTest, (err: any) => {
+      if (err) throw err;
+      replace({
+        regex: ":ComponentName",
+        replacement: name,
+        paths: [testFilePath],
+        recursive: false,
+        silent: true,
+      });
+      console.log(chalk.green('CREATED OMPONENT TEST FILE:', `${getCurrentDirectoryBase()}/${componentPath}/index.${ext}`));    
+    });
+  }
 }

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const commander = require("commander");
-const commands_1 = require("./lib/commands");
+exports.__esModule = true;
+var commander = require("commander");
+var commands_1 = require("./lib/commands");
 commander.program.version('1.0.0');
-let gen = commander.program.command('generate').alias('g');
+var gen = commander.program.command('generate').alias('g');
 gen.command('component <name> <dir>')
     .alias('c')
     .description('Create new component')
@@ -21,4 +21,3 @@ gen.command('component <name> <dir>')
     .option('-udi, --useDispatch', 'Implements useDispatch hook')
     .action(commands_1.createComponent);
 commander.program.parse(process.argv);
-//# sourceMappingURL=index.js.map

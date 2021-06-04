@@ -39,6 +39,28 @@ export const :ComponentName = (props) => {
 
 export default :ComponentName;
 `;
+exports.testComponent = `
+import React from 'react';
+import '@testing-library/jest-dom';
+import { } from '@testing-library/react';
+import :ComponentName from '.';
+
+/*
+ * :ComponentName
+ * Add description for your component
+ */
+describe('<:ComponentName />', () => {
+
+  let component;
+
+  beforeEach(() => {
+    component = render(<:ComponentName/>);
+  })
+
+  // Start your test here
+})
+
+`;
 exports.declarations = {
     useState: `const [state, setstate] = useState(null)`,
     useEffect: `

@@ -34,8 +34,10 @@ run `reactjs generate | g  component | c <componentName> <directory> <ptions>`
 
   `-F, --functional`: Create a functional component
 
-  `-T, --typscript`: Use .tsx extention
+  `-TS, --typscript`: Use .tsx extention
 
+  `-T, --test`: Add .test.tsx file for tests
+ 
   `-ust, --useState`: Implements useState hook
 
   `-uef, --useEffect`: Implements useEffect hook

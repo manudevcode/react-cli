@@ -19,7 +19,6 @@ const templates = require("../templates");
 const inquires_1 = require("../inquires");
 const files_1 = require("../files");
 exports.createComponent = async (name, dir, args) => {
-    console.log('Log at ~ file: index.ts ~ line 7 ~ createComponent ~ args', args);
     let componentPath = `${dir}/${name}`;
     if (!files_1.directoryExists(`${dir}`)) {
         files_1.createDir(`${dir}`);
@@ -56,7 +55,8 @@ const buildDeclarations = (args) => {
     return declarations;
 };
 const createFile = (componentPath, name, args) => {
-    const { style, typscript, functional } = args, restArgs = __rest(args, ["style", "typscript", "functional"]);
+    const { style, typscript, functional, test } = args, restArgs = __rest(args, ["style", "typscript", "functional", "test"]);
+    console.log('Log at 👉 ~ file: index.ts ~ line 52 ~ createFile ~ args', args);
     const ext = typscript ? 'tsx' : 'jsx';
     const filePath = `${componentPath}/index.${ext}`;
     const stylesPath = `${componentPath}/index.scss`;
@@ -87,7 +87,6 @@ const createFile = (componentPath, name, args) => {
     let declarationsString = functional ? `${declarations}` : '';
     let body = functional ? [templates.functionalComponent] : [templates.classComponent].join('\n');
     let template = imports.join('\n') + '\n' + body + '\n';
-    console.log(chalk.yellow('CREATING COMPONENT FILE:', `${files_1.getCurrentDirectoryBase()}/${componentPath}/index.jsx`));
     fs.outputFile(filePath, template, (err) => {
         if (err)
             throw err;
@@ -112,7 +111,24 @@ const createFile = (componentPath, name, args) => {
             recursive: false,
             silent: true,
         });
-        console.log(chalk.green('CREATED COMPONENT:', `${files_1.getCurrentDirectoryBase()}/${componentPath}/index.jsx`));
+        console.log(chalk.green('CREATED COMPONENT:', `${files_1.getCurrentDirectoryBase()}/${componentPath}/index.${ext}`));
     });
+    if (test) {
+        console.log(chalk.blue('CREATING COMPONENT TEST FILE:', `${files_1.getCurrentDirectoryBase()}/${componentPath}/index.test.${ext}`));
+        let templateTest = templates.testComponent;
+        let testFilePath = `${componentPath}/index.test.${ext}`;
+        fs.outputFile(testFilePath, templateTest, (err) => {
+            if (err)
+                throw err;
+            replace({
+                regex: ":ComponentName",
+                replacement: name,
+                paths: [testFilePath],
+                recursive: false,
+                silent: true,
+            });
+            console.log(chalk.green('CREATED OMPONENT TEST FILE:', `${files_1.getCurrentDirectoryBase()}/${componentPath}/index.${ext}`));
+        });
+    }
 };
 //# sourceMappingURL=index.js.map

@@ -122,12 +122,12 @@
         "signature": "0d14fa22c41fdc7277e6f71473b20ebc07f40f00e38875142335d5b63cdfc9d2"
       },
       "../lib/utils/index.ts": {
-        "version": "688353c12aa8ae0a90326408b57a62163ebd9faf5712c29a294f821d0a093d4f",
-        "signature": "c9228fc87484dcedd9c41209d0afd8a253d1ebd53bce20eeeea779ad1e70684c"
+        "version": "cf5dc5f2734d1854ce8de36ec2126d4c83ee6f2b543035b200a0982be81f7fa0",
+        "signature": "7607a55c434dba216e13d4fef87f5efe2bae5cddf9fcde225cf692d4b843264e"
       },
       "../lib/templates/index.ts": {
-        "version": "41a190fd05e3edbb64667c01d87035dcb97c1120d8cd6751ac929e2b8ea4dca6",
-        "signature": "c50e05814dc5ba46c82d460ff7958c8db43188d147cd6851287e9731ba3c4c6e"
+        "version": "cb37e45481eb76156ac1de394e6d8e44979ac3dccae9248e09a178d9b06d9a96",
+        "signature": "8d4311493a2ea8d6219b98be6e378a17361cf4905f4b28aa7a4d9e2bc4058d92"
       },
       "../lib/inquires/index.ts": {
         "version": "1be83f90bb3090fff060e267829d1bc838be2d8e80f6e9de20553eee8acc82ab",
@@ -138,12 +138,20 @@
         "signature": "25bf30c1c3215920b52534592b35c141894f81b0b346968ba0e81df3e88201a9"
       },
       "../lib/commands/index.ts": {
-        "version": "41bd111126ef0651f9e323db63894cd7d1c482d1e3ea7d01249830e936fe7e90",
+        "version": "2cd682f4d504c69fc59a4dc7d47897a748db1cf6c9552ff19b53e632ecbe75f3",
         "signature": "7692bb49528b689c924d55369b8fdc2d676e2b832604db9b50be9ad22b414373"
       },
       "../index.ts": {
-        "version": "bf3dcb84ab5186d667c9903467a822f22cb762567c9f08fe6758b868467c7f73",
+        "version": "c4aa8d571131e35535afdfb271ed0cd71b2e391c945362e6a6dd41d1ade52503",
         "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
+      },
+      "../components/elpepe/index.test.tsx": {
+        "version": "423b64031520907dafe755b90475c00b7a4ef205909d70cbc32fec91565ec123",
+        "signature": "a46d66851af2c056e805fdd574bf5ec3adb1181c43c5e41f0a1c592e338afe64"
+      },
+      "../components/elpepe/index.tsx": {
+        "version": "dd8445eac4e47ea7379f561a78ae8a476b38c2bc8baf850248ba0bfa9c430bca",
+        "signature": "5819a3325d2578debceb35da1fe0e4659c33e4ffdccfe2c646c66e28ce6104de"
       },
       "../node_modules/@types/btoa-lite/index.d.ts": {
         "version": "acbb182621c18e2bb48d82c5a4ee3a7d47b4f5db5c6986f8594fdd1432c88dd4",
@@ -876,11 +884,8 @@
       "../../../../../../../usr/local/lib/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
       "../node_modules/commander/typings/index.d.ts",
       "../node_modules/chalk/index.d.ts",
-      "../lib/utils/index.ts",
-      "../lib/templates/index.ts",
       "../lib/inquires/index.ts",
       "../lib/files/index.ts",
-      "../lib/commands/index.ts",
       "../node_modules/@types/btoa-lite/index.d.ts",
       "../node_modules/@types/figlet/index.d.ts",
       "../node_modules/@types/node/globals.d.ts",
@@ -930,7 +935,100 @@
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/base.d.ts",
       "../node_modules/@types/node/index.d.ts",
-      "../index.ts"
+      "../lib/utils/index.ts",
+      "../lib/commands/index.ts",
+      "../lib/templates/index.ts",
+      "../index.ts",
+      [
+        "../components/elpepe/index.test.tsx",
+        [
+          {
+            "file": "../components/elpepe/index.test.tsx",
+            "start": 19,
+            "length": 7,
+            "messageText": "Cannot find module 'react'.",
+            "category": 1,
+            "code": 2307
+          },
+          {
+            "file": "../components/elpepe/index.test.tsx",
+            "start": 80,
+            "length": 24,
+            "messageText": "Cannot find module '@testing-library/react'.",
+            "category": 1,
+            "code": 2307
+          },
+          {
+            "file": "../components/elpepe/index.test.tsx",
+            "start": 125,
+            "length": 3,
+            "messageText": "Module '.' was resolved to '/Users/manu/Documents/projects/VSCode/react-cli/components/ElPepe/index.tsx', but '--jsx' is not set.",
+            "category": 1,
+            "code": 6142
+          },
+          {
+            "file": "../components/elpepe/index.test.tsx",
+            "start": 186,
+            "length": 8,
+            "messageText": "Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i @types/jest` or `npm i @types/mocha`.",
+            "category": 1,
+            "code": 2582
+          },
+          {
+            "file": "../components/elpepe/index.test.tsx",
+            "start": 238,
+            "length": 10,
+            "messageText": "Cannot find name 'beforeEach'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "../components/elpepe/index.test.tsx",
+            "start": 273,
+            "length": 6,
+            "messageText": "Cannot find name 'render'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "../components/elpepe/index.test.tsx",
+            "start": 280,
+            "length": 9,
+            "messageText": "Cannot use JSX unless the '--jsx' flag is provided.",
+            "category": 1,
+            "code": 17004
+          }
+        ]
+      ],
+      [
+        "../components/elpepe/index.tsx",
+        [
+          {
+            "file": "../components/elpepe/index.tsx",
+            "start": 24,
+            "length": 7,
+            "messageText": "Cannot find module 'react'.",
+            "category": 1,
+            "code": 2307
+          },
+          {
+            "file": "../components/elpepe/index.tsx",
+            "start": 54,
+            "length": 12,
+            "messageText": "Cannot find module 'prop-types'.",
+            "category": 1,
+            "code": 2307
+          },
+          {
+            "file": "../components/elpepe/index.tsx",
+            "start": 199,
+            "length": 24,
+            "messageText": "Cannot use JSX unless the '--jsx' flag is provided.",
+            "category": 1,
+            "code": 17004
+          }
+        ]
+      ]
     ]
   },
   "version": "3.7.4"
